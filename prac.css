@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+:root {
+    --primary-color: rgb(245, 217, 36);
+}
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    /* border: none; */
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+
+/* Common CSS */
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    margin: 1rem 0rem;
+    border: .1rem solid var(--primary-color);
+}
+
+.btn:hover {
+    color: var(--primary-color);
+    background: transparent;
+}
+
+section {
+    padding: 1.8rem 9%;
+
+}
+
+section .heading {
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+
+section .heading span {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 500;
+    padding: .2rem 1rem;
+    background: rgb(159 139 139);
+    border-radius: .5rem;
+}
+
+section .heading .gap {
+    visibility: hidden;
+    background: #fff;
+}
+
+
+
+/* header section */
+
+header {
+    padding: 1.8rem 9%;
+    background: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+header .navbarIcon {
+    display: none;
+}
+
+
+header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .logo span {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin: 0 .1rem;
+}
+
+header .navbar {}
+
+header .navbar a {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 1rem;
+}
+
+header .navbar a:hover {
+    color: var(--primary-color);
+}
+
+header .icons {
+    color: #fff;
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+header .icons i:hover {
+    color: var(--primary-color);
+}
+
+header .search {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.7rem;
+    background: #333;
+    border-top: .1rem solid grey;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+header .search.active {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+header .search input {
+    border-radius: .5rem;
+    font-size: 2.2rem;
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+}
+
+header .search i {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0 1.5rem;
+}
+
+header .search i:hover {
+    color: var(--primary-color);
+}
+
+.form {
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, .7);
+    z-index: 3;
+    top: -100%;
+}
+
+.form.active {
+    top: 0;
+}
+
+.form form {
+
+    padding: 2rem;
+    border: .1rem solid #333;
+    border-radius: .5rem;
+    background: #fff;
+    /* position: absolute; */
+    /* top: -100%; */
+    /* position: relative; */
+}
+
+.form .closeForm {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 4.5rem;
+    color: white;
+    cursor: pointer;
+
+}
+
+.form form h1 {
+    margin: .5rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.form form .input {
+    width: 100%;
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+.form form .me {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.form form label {
+    font-size: 1.3rem;
+    margin: 0 .3rem;
+}
+
+.form form h3 {
+    margin: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.form form h3 a {
+    color: var(--primary-color);
+}
+
+.form form h3 a:hover {
+    color: #000;
+    text-decoration: underline;
+
+}
+
+
+/* Home section */
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content h1 {
+    color: #fff;
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+
+.home .content h3 {
+    color: rgb(224, 216, 216);
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 2rem 0;
+}
+
+.home .content .btn {
+
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+
+
+.home .video-control {
+    padding: 1rem;
+    background: #333;
+    border-radius: 5rem;
+    position: absolute;
+    top: 80%;
+}
+
+.home .video-control .circle {
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 5rem;
+    margin: 0 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.home .video-control .circle.active {
+    background: var(--primary-color);
+}
+
+
+.home .video-container video {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* Booking section */
+
+.booking .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.booking .container .row .left {
+    flex: 40rem;
+}
+
+.booking .container .row .left img {
+    width: 100%;
+}
+
+.booking .container .row .right {
+    flex: 40rem;
+    padding: 2rem;
+}
+
+.booking .container .row .right form {}
+
+.booking .container .row .right form h3 {
+    font-size: 1.7rem;
+    color: rgb(156, 149, 149);
+    margin: 1rem 0;
+}
+
+.booking .container .row .right form .input-box {
+
+    padding: 1rem .5rem;
+    border: .5rem solid rgb(214, 208, 208);
+    width: 100%;
+}
+
+.booking .container .row .right form .btn {
+
+    margin: 1.5rem 0;
+
+}
+
+/* plans section */
+
+.plans .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.plans .card-container .card {
+    flex: 30rem;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.plans .card-container .card img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.plans .card-container .card .content {}
+
+.plans .card-container .card .content h3 {
+    margin: 1rem 0rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.plans .card-container .card .content h3 i {
+    color: var(--primary-color);
+    margin: 0rem .2rem;
+}
+
+.plans .card-container .card .content p {
+    margin: 1rem 0rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.plans .card-container .card .content i {
+    color: var(--primary-color);
+}
+
+.plans .card-container .card .content .price {
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+}
+
+.plans .card-container .card .content .price span {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+/* facilities section */
+
+.facilities .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.facilities .card-container .card {
+    flex: 30rem;
+    height: 20rem;
+    text-align: center;
+    box-shadow: .2rem .2rem .4rem rgba(174, 25, 25, 0.1);
+}
+
+.facilities .card-container .card i {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin: 1rem 0rem;
+}
+
+.facilities .card-container .card h3 {
+    font-size: 3rem;
+    margin: 1rem 0rem;
+}
+
+.facilities .card-container .card p {
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+}
+
+
+/* pictures section */
+
+.pictures .card-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    /* align-items: center;
+    justify-content: center; */
+
+}
+
+.pictures .card-container .card {
+    flex: 30rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.pictures .card-container .card .content {
+    position: absolute;
+    top: -100%;
+    right: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictures .card-container .card:hover .content {
+    top: 0%;
+}
+
+.pictures .card-container .card .content h1 {
+    font-size: 3rem;
+    margin: 1rem 0rem;
+    color: var(--primary-color);
+}
+
+.pictures .card-container .card .content p {
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+    color: #fff;
+}
+
+.pictures .card-container .card .content .btn {
+    margin: 1.5rem 0;
+}
+
+
+.pictures .card-container .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* review section */
+
+.review .swiper-container .swiper-card .content {
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: 1rem;
+}
+
+.review .swiper-container .swiper-card .content img {
+    border-radius: 50%;
+}
+
+.review .swiper-container .swiper-card .content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+.review .swiper-container .swiper-card .content p {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.review .swiper-container .swiper-card .content i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+
+/* contact section */
+
+.contact .box-container {}
+
+.contact .box-container .box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .box-container .box .left {
+    flex: 30rem;
+    overflow: hidden;
+}
+
+.contact .box-container .box .left img {
+    width: 100%;
+}
+
+.contact .box-container .box .right {
+    flex: 30rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 10%);
+}
+
+.contact .box-container .box .right form {}
+
+.contact .box-container .box .right form .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.contact .box-container .box .right form .input-box input {
+    width: 49%;
+    padding: 1rem;
+    background: rgb(240, 237, 237);
+}
+
+.contact .box-container .box .right form textarea {
+    resize: none;
+    width: 100%;
+    margin: 1rem 0;
+    background: rgb(240, 237, 237);
+}
+
+.contact .box-container .box .right form .btn {}
+
+
+/* brands section */
+
+.brands .content {
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: 1rem;
+}
+
+/* footer section */
+
+.footer footer {
+    background: #333;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    /* justify-content: space-around; */
+}
+
+.footer footer .about-us {
+    width: 200px;
+    flex: 25rem;
+}
+
+.footer footer .about-us h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.footer footer .about-us p {
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.footer footer .branch-location h1 {
+    color: #fff;
+    font-size: 2rem;
+    flex: 25rem;
+}
+
+.footer footer .branch-location a {
+    color: #fff;
+    margin: 1rem 0;
+    display: block;
+}
+
+.footer footer .links {
+    flex: 25rem;
+}
+
+.footer footer .links h1 {
+    color: #fff;
+    font-size: 2rem;
+    flex: 25rem;
+}
+
+.footer footer .links a {
+    color: #fff;
+    margin: 1rem 0;
+    display: block;
+}
+
+/* .footer footer .branch-location h1 {
+    color: #fff;
+    font-size: 2rem;
+} */
+
+.footer footer .follow {
+    flex: 25rem;
+}
+
+.footer footer .follow h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.footer footer .follow a {
+    color: #fff;
+    margin: 1rem 0;
+    display: block;
+}
+
+.credits {
+    background: #333;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.credits a {
+    position: absolute;
+    right: 1%;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.credits p {
+    border-top: .1rem solid rgb(142, 134, 134);
+    padding: 1rem;
+}
+
+.credits span {
+    color: var(--primary-color);
+}
+
+
+
+
+/* Media queries */
+
+@media (max-width:1150px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    header .logo {
+        font-size: 2rem;
+    }
+
+    header .navbar a {
+        font-size: 1.5rem;
+    }
+
+    header .icons i {
+        font-size: 2rem;
+    }
+
+    .plans .card-container .card {
+        flex: 25rem;
+    }
+
+    .facilities .card-container .card {
+        flex: 25rem;
+    }
+
+}
+
+
+@media (max-width:900px) {
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #333;
+        padding: 2rem;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+        border-top: .1rem solid rgb(94, 89, 89);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        background: rgba(0, 0, 0, .4);
+        padding: 1.3rem;
+        margin: 1rem 0;
+        font-size: 1.7rem;
+    }
+
+    header .navbarIcon {
+        color: white;
+        font-size: 2.5rem;
+        display: block;
+        border: .1rem solid white;
+        padding: .5rem 1rem;
+    }
+
+    .booking .container .row .col {
+        flex: 100%;
+    }
+
+    .home .content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home .content .btn {
+        font-size: 3rem;
+    }
+
+    .pictures .card-container .card {
+        flex: 25rem;
+    }
+
+}
+
+
+
+@media (max-width:650px) {
+    .plans .card-container .card {
+        flex: 20rem;
+    }
+
+    .facilities .card-container .card {
+        flex: 20rem;
+    }
+
+    .pictures .card-container .card {
+        flex: 25rem;
+    }
+}
+
+
+@media (max-width:550px) {
+
+    .header .logo {
+        font-size: 1.5rem;
+    }
+
+    header .navbarIcon {
+        font-size: 2rem;
+    }
+
+    header .icons i {
+        font-size: 1.5rem;
+    }
+
+    .home .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home .content .btn {
+        font-size: 2rem;
+    }
+
+    section .heading span {
+        font-size: 1.5rem;
+    }
+
+    .contact .box-container .box .right form .input-box input {
+        width: 100%;
+    }
+}
